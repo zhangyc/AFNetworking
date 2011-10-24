@@ -396,11 +396,11 @@ static NSString * AFPropertyListStringFromParameters(NSDictionary *parameters) {
 #pragma mark -
 
 static inline NSString * AFMultipartFormEncapsulationBoundary() {
-    return [NSString stringWithFormat:@"%@--%@%@", kAFMultipartFormLineDelimiter, kAFMultipartFormBoundary, kAFMultipartFormLineDelimiter];
+    return [NSString stringWithFormat:@"--%@%@", kAFMultipartFormBoundary, kAFMultipartFormLineDelimiter];
 }
 
 static inline NSString * AFMultipartFormFinalBoundary() {
-    return [NSString stringWithFormat:@"%@--%@--", kAFMultipartFormLineDelimiter, kAFMultipartFormBoundary];
+    return [NSString stringWithFormat:@"--%@--%@", kAFMultipartFormBoundary, kAFMultipartFormLineDelimiter];
 }
 
 @interface AFMultipartFormData ()
@@ -446,6 +446,7 @@ static inline NSString * AFMultipartFormFinalBoundary() {
     
     [self appendString:kAFMultipartFormLineDelimiter];
     [self appendData:body];
+    [self appendString:kAFMultipartFormLineDelimiter];
 }
 
 - (void)appendPartWithFormData:(NSData *)data name:(NSString *)name {
