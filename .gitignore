@@ -1,8 +1,16 @@
+# xcode noise
+build
+TapkuLibrary/build/**
+TapkuLibraryDemo/build/**
+*.pbxuser
+*.perspectivev3
+*.mode1v3
+*.xcuserstate
+xcuserdata
+
+# old skool
+.svn
+.cvs
+
+# osx noise
 .DS_Store
-iOS Example/AFNetworking iOS Example.xcodeproj/project.xcworkspace/contents.xcworkspacedata
-
-iOS Example/AFNetworking iOS Example.xcodeproj/project.xcworkspace/xcuserdata/zhangjackson.xcuserdatad/UserInterfaceState.xcuserstate
-
-iOS Example/AFNetworking iOS Example.xcodeproj/xcuserdata/zhangjackson.xcuserdatad/xcschemes/AFNetworking iOS Example.xcscheme
-
-iOS Example/AFNetworking iOS Example.xcodeproj/xcuserdata/zhangjackson.xcuserdatad/xcschemes/xcschememanagement.plist
